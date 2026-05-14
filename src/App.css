@@ -116,12 +116,12 @@
 .overlay-backdrop {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.7);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  /* Force hardware acceleration */
-  transform: translateZ(0);
-  will-change: backdrop-filter;
+  /* Darker background to obscure video and buttons better, especially on mobile */
+  background: rgba(0, 0, 0, 0.85); 
+  
+  /* Glass effect for browsers that support it */
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
 }
 
 /* ── Video Popup ── */
