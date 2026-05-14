@@ -116,9 +116,16 @@
 .overlay-backdrop {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.65); /* Reduced opacity to show the blur better */
-  backdrop-filter: blur(25px);
-  -webkit-backdrop-filter: blur(25px);
+  /* Fallback for browsers that don't support backdrop-filter */
+  background: rgba(0, 0, 0, 0.8); 
+  
+  /* Modern browser support */
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(25px) saturate(180%);
+  -webkit-backdrop-filter: blur(25px) saturate(180%);
+  -moz-backdrop-filter: blur(25px) saturate(180%);
+  -o-backdrop-filter: blur(25px) saturate(180%);
+  -ms-backdrop-filter: blur(25px) saturate(180%);
 }
 
 /* ── Video Popup ── */
