@@ -112,7 +112,7 @@ function App() {
       </div>
 
       {/* ── Contact Overlay ── */}
-      <div className={`overlay ${activeOverlay === 'contact' ? 'open' : ''}`}>
+      <div className={`overlay contact-overlay ${activeOverlay === 'contact' ? 'open' : ''}`}>
         <div className="overlay-backdrop" onClick={closeOverlay} />
         <button className="close-btn" onClick={closeOverlay} aria-label="Close">✕</button>
         <div className="contact-content">
