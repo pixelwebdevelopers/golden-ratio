@@ -116,9 +116,9 @@
 .overlay-backdrop {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.85);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  background: rgba(0, 0, 0, 0.65); /* Reduced opacity to show the blur better */
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
 }
 
 /* ── Video Popup ── */
@@ -356,7 +356,7 @@
   }
 
   .buttons-bar {
-    bottom: 5%;
+    bottom: 12%;
     gap: 0.8rem;
   }
 
