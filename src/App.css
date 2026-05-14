@@ -121,7 +121,6 @@
   
   /* Glass effect for browsers that support it */
   backdrop-filter: blur(25px);
-  -webkit-backdrop-filter: blur(25px);
 }
 
 /* ── Video Popup ── */
