@@ -58,8 +58,8 @@ function App() {
           <button className="nav-btn" onClick={() => openOverlay('profile')} aria-label="Profile">
             <img src="/assets/GR-profile-button.png" alt="Profile" />
           </button>
-          <button className="nav-btn" onClick={() => openOverlay('contact')} aria-label="Contact Us">
-            <img src="/assets/GR-contact-us-button.png" alt="Contact Us" />
+          <button style={{ marginBottom: "0px", marginTop: "10px" }} className="nav-btn" onClick={() => openOverlay('contact')} aria-label="Contact Us">
+            <img style={{ height: "2.8rem" }} src="/assets/GR-contact-us-button.png" alt="Contact Us" />
           </button>
         </div>
       </div>
@@ -67,7 +67,11 @@ function App() {
       {/* ── Video Overlay ── */}
       <div className={`overlay ${isVideo ? 'open' : ''}`}>
         <div className="overlay-backdrop" onClick={closeOverlay} />
-        <button className="close-btn" onClick={closeOverlay} aria-label="Close">✕</button>
+        <button className="close-btn" onClick={closeOverlay} aria-label="Close">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M15 18l-6-6 6-6" />
+          </svg>
+        </button>
         <div className="video-popup-content">
           {isVideo && (
             <video
@@ -87,22 +91,13 @@ function App() {
       {/* ── PDF Overlay ── */}
       <div className={`overlay ${activeOverlay === 'profile' ? 'open' : ''}`}>
         <div className="overlay-backdrop" onClick={closeOverlay} />
-        <button className="close-btn" onClick={closeOverlay} aria-label="Close">✕</button>
+        <button className="close-btn" onClick={closeOverlay} aria-label="Close">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M15 18l-6-6 6-6" />
+          </svg>
+        </button>
 
-        {activeOverlay === 'profile' && (
-          <a
-            className="close-btn download-overlay-btn"
-            href="/assets/GR-Profile.pdf"
-            download="Golden-Ratio-Profile.pdf"
-            aria-label="Download"
-          >
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4" />
-              <polyline points="7 10 12 15 17 10" />
-              <line x1="12" y1="15" x2="12" y2="3" />
-            </svg>
-          </a>
-        )}
+        {/* Removed download button */}
 
         <div className="pdf-popup-content">
           {activeOverlay === 'profile' && (
@@ -114,7 +109,11 @@ function App() {
       {/* ── Contact Overlay ── */}
       <div className={`overlay contact-overlay ${activeOverlay === 'contact' ? 'open' : ''}`}>
         <div className="overlay-backdrop" onClick={closeOverlay} />
-        <button className="close-btn" onClick={closeOverlay} aria-label="Close">✕</button>
+        <button className="close-btn" onClick={closeOverlay} aria-label="Close">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M15 18l-6-6 6-6" />
+          </svg>
+        </button>
         <div className="contact-content">
           <h2>Get In Touch</h2>
 

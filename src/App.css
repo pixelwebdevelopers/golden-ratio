@@ -73,6 +73,7 @@
 .nav-btn {
   background: none;
   border: none;
+  margin-bottom: -15px;
   cursor: pointer;
   padding: 0;
   transition: transform 0.35s cubic-bezier(0.23, 1, 0.32, 1),
@@ -261,7 +262,7 @@
   z-index: 110;
   width: 44px;
   height: 44px;
-  border-radius: 50%;
+  border-radius: 10px;
   border: 1px solid rgba(255,255,255,0.25);
   background: rgba(0,0,0,0.5);
   backdrop-filter: blur(8px);
@@ -277,33 +278,10 @@
 .close-btn:hover {
   background: rgba(255,255,255,0.15);
   border-color: rgba(255,255,255,0.5);
-  transform: rotate(90deg);
+  transform: translateX(-4px);
 }
 
-.download-overlay-btn {
-  position: absolute;
-  top: 1.5rem;
-  right: 5rem;
-  z-index: 110;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  border: 1px solid rgba(255,255,255,0.25);
-  background: rgba(0,0,0,0.5);
-  backdrop-filter: blur(8px);
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s ease;
-}
 
-.download-overlay-btn:hover {
-  background: var(--accent-color);
-  border-color: var(--accent-color);
-  color: #000;
-  transform: translateY(-3px);
-}
 
 /* ── Responsive ───────────────────────────────────── */
 /* ── PdfViewer Component ── */
@@ -404,10 +382,5 @@
     display: none;
   }
 
-  .download-overlay-btn {
-    top: 2.5rem;
-    right: 4.8rem;
-    width: 44px;
-    height: 44px;
-  }
+
 }
