@@ -44,7 +44,7 @@ function App() {
         </div>
         <div className="bg-overlay" />
 
-        <div className={`logo-wrapper ${activeOverlay ? 'hidden' : ''}`}>
+        <div className={`logo-wrapper ${(activeOverlay && activeOverlay !== 'contact') ? 'hidden' : ''}`}>
           <img src="/assets/GR-logo.png" alt="Golden Ratio Post-Production" />
         </div>
 
@@ -118,10 +118,6 @@ function App() {
         <div className="contact-content" onClick={(e) => {
           if (e.target === e.currentTarget) closeOverlay();
         }}>
-          <div className="contact-logo">
-            <img src="/assets/GR-logo.png" alt="Golden Ratio Post-Production" />
-          </div>
-
           <div className="contact-info-wrapper">
             <div className="contact-item">
               <img src="/assets/GR-mail-button.png" alt="Email" className="contact-icon-img" />

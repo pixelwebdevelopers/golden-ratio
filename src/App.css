@@ -204,17 +204,7 @@ button, a {
   color: #fff;
 }
 
-.contact-logo {
-  position: absolute;
-  top: 60px;
-  left: 50%;
-  transform: translateX(-50%);
-}
 
-.contact-logo img {
-  height: clamp(60px, 10vh, 100px);
-  width: auto;
-}
 
 .contact-info-wrapper {
   display: flex;
@@ -387,9 +377,7 @@ button, a {
     padding: 1.5rem;
   }
 
-  .contact-logo {
-    top: 40px;
-  }
+
 
   .close-btn {
     top: 1.2rem;
