@@ -115,7 +115,9 @@ function App() {
           </svg>
         </button>
 
-        <div className="contact-content">
+        <div className="contact-content" onClick={(e) => {
+          if (e.target === e.currentTarget) closeOverlay();
+        }}>
           <div className="contact-logo">
             <img src="/assets/GR-logo.png" alt="Golden Ratio Post-Production" />
           </div>
